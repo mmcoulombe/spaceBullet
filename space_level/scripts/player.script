@@ -1,6 +1,7 @@
 go.property("max_speed", 120)
 go.property("shot_delay", 3000)
 go.property("health", 100)
+go.property("stamina", 100)
 
 local min_x = 0
 local max_x = 1280
@@ -13,7 +14,6 @@ function init(self)
 	self.speed = 0
 	self.velocity = vmath.vector3(0, 0, 0)
 	self.refresh_speed = 20
-	self.stamina = 100
 end
 
 function final(self)
@@ -31,7 +31,7 @@ function update(self, dt)
 	self.velocity.x = 0
 	self.velocity.y = 0
 
-	self.stamina = math.min(self.stamina * self.refresh_rate * dt, 100)
+	self.stamina = math.min(self.stamina + self.refresh_speed * dt, 100)
 end
 
 function on_message(self, message_id, message, sender)
@@ -54,7 +54,7 @@ function on_input(self, action_id, action)
 		self.velocity.x = 1
 	end
 
-	if (action_id == hash("normal_shot") and action.released and self.stamina >= 40) then
+	if (action_id == hash("normal_shot") and action.released and math.floor(self.stamina) >= 40) then
 		local shipPos = go.get_position()
 		shipPos.y = shipPos.y + 20
 		self.stamina = self.stamina - 45
