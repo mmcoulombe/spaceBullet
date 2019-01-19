@@ -4,6 +4,18 @@ images {
 images {
   image: "/assets/images/bullets/laserRed01.png"
 }
+images {
+  image: "/assets/images/meteor/meteor_brown_a.png"
+}
+images {
+  image: "/assets/images/meteor/meteor_brown_b.png"
+}
+images {
+  image: "/assets/images/meteor/meteor_brown_c.png"
+}
+images {
+  image: "/assets/images/meteor/meteor_brown_d.png"
+}
 animations {
   id: "ship_fire"
   images {

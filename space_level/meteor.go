@@ -1,6 +1,6 @@
 components {
-  id: "player"
-  component: "/space_level/scripts/player.script"
+  id: "meteor"
+  component: "/space_level/scripts/meteor.script"
   position {
     x: 0.0
     y: 0.0
@@ -17,33 +17,13 @@ embedded_components {
   id: "sprite"
   type: "sprite"
   data: "tile_set: \"/space_level/sprite.atlas\"\n"
-  "default_animation: \"playerShip2_green\"\n"
+  "default_animation: \"meteor_brown_a\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {
     x: 0.0
     y: 0.0
-    z: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-embedded_components {
-  id: "back_fire"
-  type: "sprite"
-  data: "tile_set: \"/space_level/sprite.atlas\"\n"
-  "default_animation: \"ship_fire\"\n"
-  "material: \"/builtins/materials/sprite.material\"\n"
-  "blend_mode: BLEND_MODE_ALPHA\n"
-  ""
-  position {
-    x: 0.0
-    y: -45.0
     z: 0.0
   }
   rotation {
@@ -54,33 +34,15 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "bulletfactory"
-  type: "factory"
-  data: "prototype: \"/space_level/bullet.go\"\n"
-  "load_dynamically: false\n"
-  ""
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-embedded_components {
-  id: "ship_collider"
+  id: "meteor_collider"
   type: "collisionobject"
   data: "collision_shape: \"\"\n"
-  "type: COLLISION_OBJECT_TYPE_KINEMATIC\n"
+  "type: COLLISION_OBJECT_TYPE_TRIGGER\n"
   "mass: 0.0\n"
   "friction: 0.1\n"
   "restitution: 0.5\n"
-  "group: \"player\"\n"
-  "mask: \"meteor\"\n"
+  "group: \"meteor\"\n"
+  "mask: \"player\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
@@ -98,8 +60,8 @@ embedded_components {
   "    index: 0\n"
   "    count: 3\n"
   "  }\n"
-  "  data: 56.4045\n"
-  "  data: 37.506\n"
+  "  data: 50.0\n"
+  "  data: 41.561\n"
   "  data: 10.0\n"
   "}\n"
   "linear_damping: 0.0\n"
