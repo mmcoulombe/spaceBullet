@@ -6,7 +6,7 @@ embedded_instances {
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/main/bg.atlas\\\"\\n"
-  "default_animation: \\\"purple_bg\\\"\\n"
+  "default_animation: \\\"star_bg\\\"\\n"
   "material: \\\"/builtins/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
@@ -25,7 +25,7 @@ embedded_instances {
   ""
   position {
     x: 0.0
-    y: -360.0
+    y: -125.0
     z: 0.0
   }
   rotation {
@@ -46,7 +46,7 @@ embedded_instances {
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/main/bg.atlas\\\"\\n"
-  "default_animation: \\\"purple_bg\\\"\\n"
+  "default_animation: \\\"star_bg\\\"\\n"
   "material: \\\"/builtins/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
@@ -65,7 +65,7 @@ embedded_instances {
   ""
   position {
     x: 0.0
-    y: 360.0
+    y: 125.0
     z: 0.0
   }
   rotation {
@@ -121,7 +121,7 @@ embedded_instances {
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/main/bg.atlas\\\"\\n"
-  "default_animation: \\\"purple_bg\\\"\\n"
+  "default_animation: \\\"star_bg\\\"\\n"
   "material: \\\"/builtins/materials/sprite.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"
@@ -140,7 +140,7 @@ embedded_instances {
   ""
   position {
     x: 0.0
-    y: 1080.0
+    y: 375.0
     z: 0.0
   }
   rotation {

@@ -1,40 +1,16 @@
-go.property("speed", 50)
+go.property("speed", 100)
 
 local bg_part = { "bg_01", "bg_02", "bg_03" }
-
-function init(self)
-	
-end
-
-function final(self)
-	-- Add finalization code here
-	-- Remove this function if not needed
-end
 
 function update(self, dt)
 	for i, bg in ipairs(bg_part) do
 		local pos = go.get_position(bg)
 
-		if (pos.y <= -720) then
-			pos.y = pos.y + (720 * 3)
+		if (pos.y <= 0) then
+			pos.y = pos.y + 800
 		end
 
 		pos.y = pos.y - self.speed * dt
 		go.set_position(pos, bg)
 	end
-end
-
-function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Remove this function if not needed
-end
-
-function on_input(self, action_id, action)
-	-- Add input-handling code here
-	-- Remove this function if not needed
-end
-
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Remove this function if not needed
 end

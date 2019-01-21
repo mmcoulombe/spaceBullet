@@ -1,5 +1,5 @@
 images {
-  image: "/assets/images/purple_bg.png"
+  image: "/assets/images/background/star_bg.png"
 }
 margin: 0
 extrude_borders: 0

@@ -2,7 +2,7 @@
 -- Controller every timed event, wave for a level
 --------------------------------------------------
 
-go.property("asteroid_delay", 1500)
+go.property("asteroid_delay", 5)
 
 local wait = require("main.wait")
 
@@ -24,6 +24,7 @@ function init(self)
 	-- Add initialization code here
 	-- Remove this function if not needed
 	self.co = coroutine.create(spawn_asteroid)
+	msg.post("@render:", "clear_color", { color = vmath.vector4(0.369, 0.247, 0.42, 1) })
 	msg.post(".", "start_wave")
 end
 
